@@ -1,0 +1,21 @@
+        
+class GridPoint:  
+    def __init__(self, x, y):  
+        self.x = x  
+        self.y = y  
+  
+    def __gt__(self, other):  # Overloading the greater than operator
+        return self.x > other.x  
+# Returns true if value of x in the left operand is greater than that in the right one. Returns false otherwise
+  
+    def __str__(self):  
+        string = str(self.x)  
+        string = string + ", " + str(self.y)  
+        return string  
+  
+point1 = GridPoint(3, 5)  
+point2 = GridPoint(-1, 4)  
+if point1 > point2:  # Compares with the overloaded __gt__() method
+    print('point1 is greater than point2')  
+else:  
+    print('point1 is not greater than point2')  
